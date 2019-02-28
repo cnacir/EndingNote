@@ -23,21 +23,7 @@
 // require OptionsScene
 // require CreditsScene
 // require Model
-
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require_tree .
-var game = document.getElementById("game")
-var head = document.querySelector("head")
-function importScript() {
-  var script = document.createElement('script')
-	var scripts = document.scripts;
-	for (var i = 0; i < scripts.length; i++) {
-		script.setAttribute('src', scripts[i])
-		document.body.appendChild(script)
-	};
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-	if (!game) {
-		importScript();
-	};
-});

@@ -65,7 +65,7 @@ class GameScene extends Phaser.Scene {
 		velocity_all_ball = 200;
 
 		// Set greeting message with instructions to start
-		this.startText = this.add.text(25, 600, 'Press <SPACE> to play !', {font: '50px Arial',fill: 'white'});
+		// this.startText = this.add.text(25, 600, 'Press <SPACE> to play !', {font: '50px Arial',fill: 'white'});
 
 		// Set Game Over message
 		this.gameOverText = this.add.text(config.width/3 - 50, 350, 'GAME OVER ', {font: '90px Arial',fill: 'white'});
@@ -128,14 +128,6 @@ class GameScene extends Phaser.Scene {
 				loop: true,
 		});
 
-		// Gameover if strikes are over 10
-		var game_over = this.time.addEvent({
-				delay: 500,
-				callback: this.gameOver,
-				callbackScope: this,
-				loop: true,
-		});
-
 		// When enter is pressed, restart the game
 		this.restart_game_key = this.input.keyboard.on('keydown_ENTER', function () {
 			this.gameRestart();
@@ -157,9 +149,19 @@ class GameScene extends Phaser.Scene {
 		this.note20 = this.sound.add('note10', {volume: 0.5});
 		this.note21 = this.sound.add('note11', {volume: 0.5});
 
+		var game_over = this.time.addEvent({
+			delay: 500,
+			callback: this.gameOver,
+			callbackScope: this,
+			loop: true,
+		});
+		
 	};
 
 	update() {
+
+	// Gameover if strikes are over 10
+
 
 	// Check if blue_note_group.child exists
 	Phaser.Actions.Call(this.blue_note_group.getChildren(), function(blue) {
@@ -553,8 +555,17 @@ gameOver() {
 		this.gameOverText.visible = true;
 		this.restartText.visible = true;
 		enter.visible = true;
+		this.time.addEvent({
+				delay: 0,
+				callback: () => {
+					score = 0
+					strikes = 0
+				},
+				callbackScope: this,
+				loop: true
+		});
 		this.immigrantSong.stop();
-		this.time.delayedCall(3000, function() {
+		this.time.delayedCall(5000, function() {
 	    this.scene.start('Title');
 	  }, [], this);
 	};

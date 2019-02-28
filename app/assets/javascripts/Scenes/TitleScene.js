@@ -4,6 +4,9 @@ class TitleScene extends Phaser.Scene {
   }
 
   create () {
+		// Game name
+		this.endingNote = this.add.text(config.width/2.5 - 70, 50, 'ENDING NOTE ', {font: '90px VT323', stroke: 'navy', strokeThickness: 8, fill: 'white'});
+
     // Game
     this.gameButton = new Button(this, config.width/2, config.height/2 - 100, 'blueButton1', 'blueButton2', 'Play', 'Game');
 
