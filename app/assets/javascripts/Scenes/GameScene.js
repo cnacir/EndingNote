@@ -117,8 +117,8 @@ class GameScene extends Phaser.Scene {
 		this.niceText = this.add.text(230, 100, 'NICE !', {font: '50px Arial', fill: '#00FF21'});
 		this.niceText.visible = false;
 
-		this.logo = this.add.sprite(25,10, 'logo');
-		this.logo.setScale(0.30,0.30);
+		// this.logo = this.add.sprite(25,10, 'logo');
+		// this.logo.setScale(0.30,0.30);
 
 
 		var gameLoop = this.time.addEvent({
@@ -155,7 +155,7 @@ class GameScene extends Phaser.Scene {
 			callbackScope: this,
 			loop: true,
 		});
-		
+
 	};
 
 	update() {

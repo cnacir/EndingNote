@@ -17,4 +17,25 @@
  	display : block;
  	margin :auto;
  	min-width: 375px;
+	padding-top: 2.5em;
  }
+
+	body {
+		background-color: #F5FDC6;
+	}
+
+	ul {
+		background-color: black;
+	}
+
+	.nav-item {
+		border: 1px solid white;
+	}
+
+	.nav-item:hover {
+		background-color: rgba(white, 0.5);
+	}
+
+	.user-info {
+		color: white;
+	}

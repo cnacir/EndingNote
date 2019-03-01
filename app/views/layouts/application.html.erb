@@ -18,21 +18,32 @@
   		<p class="alert alert-danger"><%= alert %></p>
 		<% end %>
 
-		<ul class="nav">
-			<p class="navbar-text pull-right">
-			<%= link_to "Home", root_path, :class => 'navbar-link', data: { turbolinks: false } %> |
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+			<%= link_to "Home", root_path, :class => 'nav-link', data: { turbolinks: false } %>
+			</li>
 			<% if user_signed_in? %>
-  			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-				<%= link_to "Game", game_path, :class => 'navbar-link', data: { turbolinks: false }  %> |
-  			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
+			<li class="nav-item">
+  			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav-link' %>
+			</li>
+			<li class="nav-item">
+				<%= link_to "Game", game_path, :class => 'nav-link', data: { turbolinks: false }  %>
+			</li>
+			<li class="nav-item">
+  			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link'  %>
+			</li>
 			<% else %>
-  			<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  			<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+			<li class="nav-item">
+  			<%= link_to "Sign up", new_user_registration_path, :class => 'nav-link'  %>
+			</li>
+			<li class="nav-item">
+  			<%= link_to "Login", new_user_session_path, :class => 'nav-link'  %>
+			</li>
 			<% end %>
 			<% if user_signed_in? %>
-				Logged in as <strong><%= current_user.username %></strong> with a highscore of <strong><%= current_user.highscore %></strong>.
+				<p class="user-info">Logged in as <strong><%= current_user.username %></strong> with a highscore of <strong><%= current_user.highscore %></strong>.
+				</p>
 			<% end %>
-			</p>
 		</ul>
     <%= yield %>
   </body>
