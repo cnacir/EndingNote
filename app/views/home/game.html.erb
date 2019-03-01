@@ -1,3 +1,20 @@
-<div id="game">
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</div>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<center>
+	<nav class="buttons">
+		<strong>A</strong>= Green |
+		<strong>S</strong>= Red |
+		<strong>D</strong>= Yellow |
+		<strong>F</strong>= Blue |
+  	<strong>G</strong>= Orange |
+	</nav>
+</center>
+<div id="phaser-example"></div>
+<center>
+	<div class="instructions">
+		<h2>Instructions</h2>
+		<p>Press the button corresponding to the right color as the note hits the black line to score big! Press it as you're near the line for +1 point and get it perfectly on the line as you press for +5 points!
+
+		If you miss or hit the note at the wrong time you'll get a strike. Get 10 strikes and it's game over!.
+		</p>
+	</div>

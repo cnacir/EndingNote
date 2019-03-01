@@ -17,14 +17,14 @@
  	display : block;
  	margin :auto;
  	min-width: 375px;
-	padding-top: 2.5em;
+	padding-top: 1em;
  }
 
 	body {
 		background-color: #F5FDC6;
 	}
 
-	ul {
+	.nav {
 		background-color: black;
 	}
 
@@ -43,4 +43,13 @@
 	img {
 		display: block;
 		margin: auto;
+	}
+
+	.buttons {
+		padding: 1vh;
+		font-size: 4vh;
+	}
+
+	.instructions p {
+		font-size: 3vh;
 	}
