@@ -41,8 +41,8 @@
 			</li>
 			<% end %>
 			<% if user_signed_in? %>
-				<p class="user-info">Logged in as <strong><%= current_user.username %></strong> with a highscore of <strong><%= current_user.highscore %></strong>.
-				</p>
+				<li class="nav-link">Logged in as <strong><%= current_user.username %></strong> with a highscore of <strong><%= current_user.highscore %></strong>.
+				</li>
 			<% end %>
 		</ul>
     <%= yield %>
