@@ -23,7 +23,7 @@ Here is a working live demo :  https://ending-note.herokuapp.com/
 
 ## Usage Instructions
 - Sign up or log in
-  - Demo username: admin
+  - Demo email: admin@admin.com
   - Demo password: admin1
 - Proceed to [game](https://ending-note.herokuapp.com/game) page.
 - Press the button corresponding to each note per the instructions under the game screen.
